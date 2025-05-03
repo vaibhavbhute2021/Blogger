@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 @import url('../node_modules//font-awesome/css/font-awesome.css');
 
+
 html, body { height: 100%; }
 
 /* Order */
@@ -16,7 +17,11 @@ body { margin: 0; padding: 0;
     font-family: "Gruppo", sans-serif;
     font-weight: 400;
     font-style: normal; 
-    background-color: #e3e3e3;
+    background-color: #f1eeee;
+}
+
+.nav{
+    color: #f1eeee;
 }
 
 .card h1, h2, h3, h4, h5, h6{
@@ -32,3 +37,6 @@ body { margin: 0; padding: 0;
     box-sizing: border-box; /* Ensures padding doesn't add extra height */
 }
 
+
+
+  

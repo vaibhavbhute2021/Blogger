@@ -1,4 +1,4 @@
-<div class="container-fluid mt-5">
+<!-- <div class="container-fluid mt-5">
   <div class="row gy-4">
     <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let blog of blogs">
       <div class="card shadow-sm rounded-lg h-100">
@@ -9,7 +9,7 @@
         <div class="card-body d-flex flex-column">
           <h2 class="card-title">{{blog.blogTitle}}</h2>
 
-          <!-- Fixed: tags rendered inline in one div -->
+        
           <div class="tags d-flex flex-wrap mt-2">
             <span class="badge" *ngFor="let tag of blog.tags">{{tag}}</span>
           </div>
@@ -27,4 +27,51 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+<mat-tab-group
+  mat-stretch-tabs="false"
+  mat-align-tabs="start"
+  style="background-color: rgba(0, 0, 0, 0.37);"
+>
+  <mat-tab label="Technology">
+    <app-techtab1></app-techtab1>
+  </mat-tab>
+  <mat-tab label="History and Literature">
+    <app-historytab2></app-historytab2>
+  </mat-tab>
+  <mat-tab label="Healthcare">
+    <app-healthcaretab3></app-healthcaretab3>
+  </mat-tab>
+  <mat-tab label="Sci-Fi">
+    <app-sci-fitab4></app-sci-fitab4>
+  </mat-tab>
+  <mat-tab label="Science">
+    <!-- <app-sci-fitab4></app-sci-fitab4> -->
+  </mat-tab>
+  <mat-tab label="Travel">
+    <!-- <app-sci-fitab4></app-sci-fitab4> -->
+  </mat-tab>
+  <mat-tab label="Food">
+    <!-- <app-sci-fitab4></app-sci-fitab4> -->
+  </mat-tab>
+  <mat-tab label="Finance">
+    <!-- <app-sci-fitab4></app-sci-fitab4> -->
+  </mat-tab>
+  <mat-tab label="Art">
+    <!-- <app-sci-fitab4></app-sci-fitab4> -->
+  </mat-tab>
+  <mat-tab label="Gaming">
+    <!-- <app-sci-fitab4></app-sci-fitab4> -->
+  </mat-tab>
+  <mat-tab label="Entertainment">
+    <!-- <app-sci-fitab4></app-sci-fitab4> -->
+  </mat-tab>
+  <mat-tab label="Politics">
+    <!-- <app-sci-fitab4></app-sci-fitab4> -->
+  </mat-tab>
+  <mat-tab label="Space">
+    <!-- <app-sci-fitab4></app-sci-fitab4> -->
+  </mat-tab>
+</mat-tab-group>
+

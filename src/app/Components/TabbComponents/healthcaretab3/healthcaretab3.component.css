@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .container {
@@ -68,15 +69,3 @@ h3 {
     padding: 1rem;
   }
 }
-
-
-.mat-tab-group {
-  margin-bottom: 48px;
-  
-}
-
-.mat-tab .label{
-  color: black;
-}
-
-
