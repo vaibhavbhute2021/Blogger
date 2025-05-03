@@ -1,0 +1,72 @@
+<!-- <div *ngIf="blogs.length > 0">
+    <div *ngFor="let blog of blogs">
+      <h2>{{ blog.blogTitle }}</h2>
+      <p><strong>Author:</strong> {{ blog.userName }}</p>
+      <p>{{ blog.blogShortDesc }}</p>
+      <p><strong>Category:</strong> {{ blog.blogCatagory }}</p>
+      <p><strong>{{blog.blogContent}}</strong></p>
+      <p><strong>Likes:</strong> {{ blog.likes }}</p>
+      <hr />
+    </div>
+  </div> -->
+
+
+  <!-- <div class="container">
+    <div>
+      <span>Blogger</span>
+     </div>
+     <div class="p-5">
+      <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eum architecto iusto, quasi quia reprehenderit magni beatae. Voluptatem, quam. Possimus blanditiis, soluta autem voluptatibus veritatis vel nostrum ad ut dolor.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat cum esse libero delectus explicabo asperiores aspernatur hic nobis ducimus rem iusto at labore, eveniet quos, corporis vitae quam eligendi necessitatibus.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum molestiae temporibus neque atque magni molestias inventore accusamus consectetur dolorem pariatur possimus, facere non assumenda blanditiis architecto officia! Voluptates, inventore corporis?
+      </h2>
+     </div>
+  </div> -->
+
+	<ngb-carousel>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+        <div class="container">
+          <div class="box1" style="background-image: url(https://images.pexels.com/photos/1365795/pexels-photo-1365795.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);">
+            <h1>Blogger 1</h1>
+          </div>
+          <div class="box2">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eum architecto iusto, quasi quia reprehenderit magni beatae. Voluptatem, quam. Possimus blanditiis, soluta autem voluptatibus veritatis vel nostrum ad ut dolor.
+            </h2>
+          </div>
+        </div>
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+			
+        <div class="container">
+          <div class="box1" style="background-image: url(https://images.pexels.com/photos/1081685/pexels-photo-1081685.jpeg?auto=compress&cs=tinysrgb&w=600);">
+            <h1>Blogger 1</h1>
+          </div>
+          <div class="box2">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eum architecto iusto, quasi quia reprehenderit magni beatae. Voluptatem, quam. Possimus blanditiis, soluta autem voluptatibus veritatis vel nostrum ad ut dolor.
+            </h2>
+          </div>
+        </div>
+			</div>
+		</ng-template>
+		<ng-template ngbSlide>
+			<div class="picsum-img-wrapper">
+        <div class="container">
+          <div class="box1" style="background-image: url(https://images.pexels.com/photos/41162/moon-landing-apollo-11-nasa-buzz-aldrin-41162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);">
+            <h1>Blogger 1</h1>
+          </div>
+          <div class="box2">
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab eum architecto iusto, quasi quia reprehenderit magni beatae. Voluptatem, quam. Possimus blanditiis, soluta autem voluptatibus veritatis vel nostrum ad ut dolor.
+\            </h2>
+           
+          </div>
+        </div>
+			</div>
+		</ng-template>
+	</ngb-carousel>
+
+  <app-features></app-features>
+
+

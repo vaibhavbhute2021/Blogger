@@ -1,0 +1,38 @@
+
+ <div class="container blog-container p-5" *ngFor="let blog of blog">
+  <div class="row">
+    <div class="">
+ <div class="blog-header">
+    <h1 class="blog-heading m-3">{{ blog.blogTitle }}</h1>
+    <h4 class="blog-category">{{ blog.blogCatagory }}</h4>
+  </div>
+  <div class="blog-content">
+    <div [innerHTML]="blog.blogContent"></div>
+     <!-- <p>{{blog.blogContent}}</p> -->
+  </div>
+  <div class="blog-tags">
+    <hr />
+    <span *ngFor="let tag of blog.tags" class="tag">
+      #{{ tag }}
+    </span>
+  </div>
+  <div class="blog-footer">
+    <div class="interaction">
+      <span>
+        <mat-icon fontIcon="thumb_up"></mat-icon>
+        {{ blog.likes.length }}
+      </span>
+      <span class="mx-3">
+        <mat-icon fontIcon="mode_comment"></mat-icon>
+        {{ blog.comments.length }}
+      </span>
+    </div>
+    <div class="edit-btn">
+      <button class="btn btn-sm btn-outline-info">Edit</button>
+    </div>
+  </div>
+    </div>
+
+   
+  </div>
+</div>

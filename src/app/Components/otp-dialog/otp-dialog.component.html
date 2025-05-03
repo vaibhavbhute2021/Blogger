@@ -1,0 +1,13 @@
+<div class="card">
+    <form class="form" [formGroup]="otpForm"> 
+        <div class="title">OTP</div> 
+        <div class="title">Verification Code</div> 
+        <p class="message">We have sent a verification code to your mobile number</p> 
+        <div class="inputs"> 
+            <input type="text"  formControlName="otp" placeholder="Enter OTP" maxlength="6"> 
+            <div Class="text-danger mt-2" *ngIf="otpForm.get('otp')?.touched && otpForm.get('otp')?.hasError('required')">*OTP is required</div>
+            <div Class="text-danger mt-2" *ngIf="otpForm.get('otp')?.touched && otpForm.get('otp')?.hasError('pattern')">*Invalid OTP.</div>
+        </div> 
+        <button class="action" (click)="verifyOTP()">verify me</button> 
+    </form>
+</div>

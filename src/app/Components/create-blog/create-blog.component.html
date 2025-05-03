@@ -1,0 +1,86 @@
+
+
+<form [formGroup]="editorForm">
+    <div class="container-fluid">
+
+        <div class="editor">
+            <editor apiKey="ais0iuyodkz0edo9tb0lhc8fr1vjbyekxt4wfvmjzs0xrvv5"
+            [init]="editorConfig"  formControlName="blogContent">
+       
+        </editor>
+        </div>
+
+        <div class="editorForm">
+            <div class="card p-3" style="height: fit-content;">
+                <h2>Editor Form</h2>
+               
+                    <div class="form-group mb-2">
+                        <label for="blogTitle" class="m-1">Title</label>
+                        <input class="form-control form-control-sm" type="text" formControlName="blogTitle" placeholder="blogtitle">
+                        <div Class="text-danger mt-2" *ngIf="editorForm.get('blogTitle')?.touched && editorForm.get('blogTitle')?.hasError('required')">*Enter Blog Title.</div>
+                    </div>
+        
+                    <div class="form-group mb-2">
+                        <label for="blogShortDesc" class="m-1">Short Description</label>
+                        <textarea rows="10" class="form-control form-control-sm" type="text" formControlName="blogShortDesc" placeholder="blogShortDesc"></textarea>
+                        <div Class="text-danger mt-2" *ngIf="editorForm.get('blogShortDesc')?.touched && editorForm.get('blogShortDesc')?.hasError('required')">*Enter short description for you blog.</div>
+                        <div class="text-danger mt-2" *ngIf="editorForm.get('blogShortDesc')?.touched &&editorForm.get('blogShortDesc')?.hasError('minlength')">
+                            *Short description must be at least 180 characters long.
+                          </div>
+                          <div class="text-danger mt-2" *ngIf="editorForm.get('blogShortDesc')?.touched &&editorForm.get('blogShortDesc')?.hasError('maxlength')">
+                            *Short description cannot exceed 200 characters.
+                          </div>
+                    </div>
+        
+                    <div class="form-group mb-2">
+                        <label for="blogCatagory" class="m-1">Blog Catagory</label>
+                        <div class="catagory-flex">
+                           <div class="blogCatagory">
+                            <select formControlName="blogCatagory" class="form-control form-control-sm">
+                                <option selected>Choose...</option>
+                                <option>Technology</option>
+                                <option>Healthcare</option>
+                                <option>Friction and Strory</option>
+                                <option>Art</option>
+                                <option>Movies</option>
+                                <option>History and Literature</option>
+                              </select>
+
+                              <div Class="text-danger mt-2" *ngIf="editorForm.get('blogCatagory')?.touched && editorForm.get('blogCatagory')?.hasError('required')">*Select the blog catagory.</div>
+
+                           </div>
+
+                           <div class="addCatagory">
+                            <img src="../../../assets/icons/add-circle.png" alt="Add Catagory">
+                           </div>
+                        </div>
+                    </div>
+        
+                    <div formArrayName="tags" class="mb-2">
+                        <label class="m-1">Tags</label> <br>
+                        <div *ngFor="let tag of tags.controls; let i = index">
+                          <div class="tag-flex mb-1">
+                            <div class="tag-input">
+                                <input [formControlName]="i" placeholder="Enter tag" class="form-control form-control-sm"/>
+                            </div>
+                            <div class="remove-tag">
+                                <img src="../../../assets/icons/minus-circle.png" alt="Add Catagory" (click)="removeTag(i)"> 
+                                <!-- <button class="btn btn-sm btn-danger"  (click)="removeTag(i)">Remove</button> -->
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn btn-sm btn-outline-warning mt-1" (click)="addTag()">Add Tag</button>
+                        <div class="text-danger mt-2" *ngIf="tags.length === 0 && editorForm.get('tags')?.touched">
+                            *Select at least one tag.
+                        </div>
+                    </div>
+
+                    <button class="btn btn-sm btn-primary mt-3" [disabled]="editorForm.invalid" [class.disabled]="editorForm.invalid" (click)="addBlog()">Add Blog</button>
+
+            </div>
+        
+        </div>
+
+    </div>
+</form>
+

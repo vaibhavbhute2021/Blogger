@@ -1,0 +1,43 @@
+<section class="profile-container">
+    <div class="profile-wrapper">
+      <div class="profile-header">
+        <div class="profile-info">
+          <div class="avatar-container">
+            <img
+              loading="lazy"
+              [src]="user.profileImage"
+              class="avatar-image"
+              alt="Profile photo of Vaibhav Bhute"
+            />
+          </div>
+          <h1 class="profile-name">{{user.firstName}} {{user.lastName}}</h1>
+          <h2 class="profile-username">{{user.userName}}</h2>
+          <p class="profile-bio">
+            {{user.bio}}
+          </p>
+        </div>
+        <div class="edit-button" (click)="editProfile()">
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/a94574e26e8685b5bec54cfbb117abab8c498b63c756e4ca59f5d847f1caa01e?placeholderIfAbsent=true&apiKey=8ca43d0aa13345b29dbbcc3f7629adc0"
+            class="badge-icon"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="stats-container">
+        <div class="stat-item">
+          <span class="stat-number">12</span>
+          <span class="stat-label">Followers</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">2</span>
+          <span class="stat-label">Blogs</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">21</span>
+          <span class="stat-label">Following</span>
+        </div>
+      </div>
+    </div>
+  </section>

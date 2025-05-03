@@ -1,0 +1,34 @@
+
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+@import url('../node_modules//font-awesome/css/font-awesome.css');
+
+html, body { height: 100%; }
+
+/* Order */
+@layer reset, primeng;
+
+/* Reset CSS */
+@layer reset {
+   
+}
+body { margin: 0; padding: 0;  
+    font-family: "Gruppo", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    background-color: #e3e3e3;
+}
+
+.card h1, h2, h3, h4, h5, h6{
+    margin: 0%;
+}
+
+.content {
+    margin-top: 60px; /* Height of the navbar */
+    margin-bottom: 60px; /* Height of the footer */
+    padding: 10px; /* Optional: Add padding for better spacing */
+    overflow-y: auto; /* Allows the content to scroll properly */
+    height: calc(100vh - 120px); /* Full height minus navbar and footer height */
+    box-sizing: border-box; /* Ensures padding doesn't add extra height */
+}
+

@@ -1,0 +1,59 @@
+<div class="container">
+    <section class="">
+      <div class="px-4 py-5 px-md-5 text-center text-lg-start">
+        <div class="container">
+          <div class="row gx-lg-5 align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <h1 class="my-5 display-3 fw-bold ls-tight">
+                The best offer <br />
+                <span class="text-primary">for your business</span>
+              </h1>
+              <p style="color: hsl(217, 10%, 50.8%)">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+                quibusdam tempora at cupiditate quis eum maiores libero
+                veritatis? Dicta facilis sint aliquid ipsum atque?
+              </p>
+            </div>
+  
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <div class="card">
+                <div class="card-body py-5 px-md-5">
+                  <form [formGroup]="loginForm">
+                    <h2>Login</h2>
+                    <div class="mb-3">
+                      <input type="email" class="form-control form-control-sm" formControlName="email" placeholder="Email Address" />
+                      <div Class="text-danger mt-2" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('email')">*Enter Valid Email</div>
+                      <div Class="text-danger mt-2" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('required')">*Email is required</div>
+                    </div>
+                  
+                  <div class="mb-3">
+                    <input type="password" class="form-control form-control-sm" formControlName="password" placeholder="Password" />
+                    <div Class="text-danger mt-2" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.hasError('required')">*Password is required</div>
+                    <div Class="text-danger mt-2" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.hasError('invalidPassword')">*Password must be at least 8 characters long, contain one uppercase letter, one lowercase letter, one digit, and one special character.
+                    </div>
+                  </div> 
+                  <button type="submit" class="btn btn-primary btn-block mb-3" (click)="login()">Login</button>
+                  <div>
+                    <a routerLink="/joinus" style="text-decoration: none;">
+                      New User? Sign Up
+                    </a>
+                  </div>
+                
+                  <div class="mt-2">
+                      <button style="text-decoration: none;" routerLink="/forgetPassword">
+                        Forget Password? Click Here
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  

@@ -1,0 +1,60 @@
+<div class="container">
+  <section id="pricing">
+    <h1>Here are our Pricing plans</h1><br>
+    <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut suscipit, ad vel minus voluptatum non aperiam beatae inventore unde illum perspiciatis quas itaque? Eveniet ea vero omnis mollitia nobis beatae!</h3>
+    <div class="row">
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h2>FREE</h2>
+          </div>
+          <div class="card-body">
+            <h2>Free</h2>
+            <p>No Listing</p>
+            <p>5 Matches Per Day</p>
+            <p>10 Messages Per Day</p>
+            <p>Unlimited App Usage</p>
+            <button *ngIf="!isLoggedIn" class="btn btn btn-block btn-dark" type="button">Sign Up</button>
+            <button *ngIf="isLoggedIn" class="btn btn btn-block btn-dark" type="button">Start</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h2>PLUS</h2>
+          </div>
+          <div class="card-body">
+            <h2>$49 / mo</h2>
+            <p>No Listing</p>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button *ngIf="!isLoggedIn" class="btn btn btn-block btn-dark" type="button">Sign Up</button>
+            <button *ngIf="isLoggedIn" class="btn btn btn-block btn-dark" type="button">Start</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-column col-lg-4">
+        <div class="card">
+          <div class="card-header">
+            <h2>PRO</h2>
+          </div>
+          <div class="card-body">
+            <h2>$99 / mo</h2>
+            <p>Pirority Listing</p>
+            <p>Unlimited Matches</p>
+            <p>Unlimited Messages</p>
+            <p>Unlimited App Usage</p>
+            <button *ngIf="!isLoggedIn" class="btn btn btn-block btn-dark" type="button">Sign Up</button>
+            <button *ngIf="isLoggedIn" class="btn btn btn-block btn-dark" type="button">Start</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+</div>

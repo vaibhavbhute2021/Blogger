@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.nav-item{
+    font-weight: bold;
+    margin-left: 20px;
+    padding: 5px;
+}
+/* .nav-item :hover{
+    text-decoration: underline;
+    color: #EE4266;
+} */
+
+.nav-item > .nav-link:hover{
+    text-decoration: underline;
+    color: #EE4266;
+}
+
+.navbar-brand{
+    font-size: 32px;
+   
+}
+#nav_brand{
+    height: 30px;
+    width: 30px;
+}
+
+.custom-offcanvas-width {
+    width: 200px; /* Reduce width to 200px */
+}
+
+@media (min-width: 576px) {
+    .custom-offcanvas-width {
+        width: 250px; /* Slightly larger width for larger mobile screens */
+    }
+}
+
+h2, h1{
+    margin-bottom: 0%;
+    font-weight: 700;
+    font-size: larger;
+    font-style: normal;
+    font-family: "Pacifico", cursive;
+    font-weight: bold;
+    color: #EE4266;
+      
+}
+
+.nav-link-custom {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link-custom mat-icon {
+    margin-right: 8px; /* Adjust spacing between icon and text */
+  }
+  
+
+a{
+    text-decoration: none;
+}
+/* Search Box */
+/* From Uiverse.io by Bodyhc */ 
+.search {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .search input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search button[type="submit"] {
+    background-color: #4e99e9;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .9s ease;
+  }
+  
+  .search button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+    background-color: blue;
+  }
+  /**********************************/

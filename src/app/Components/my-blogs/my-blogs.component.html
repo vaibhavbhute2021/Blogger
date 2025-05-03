@@ -1,0 +1,31 @@
+<div class="container">
+  
+<div class="card mb-4" *ngFor="let blog of blogs">
+  <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" alt="" srcset="">
+  <h1 class="mt-3">{{blog.blogTitle}}</h1>
+  <h5 class="mt-1">{{blog.blogShortDesc}}</h5>
+
+  <div class="iconbar p-2">
+    <div>
+      <span>
+        <mat-icon fontIcon="thumb_up"></mat-icon>
+          {{blog.likes.length}}
+       </span>
+
+       <span class="mx-3">
+        <mat-icon fontIcon="mode_comment"></mat-icon>
+       </span>
+
+    </div>
+  
+    <div>
+
+      <span>
+        <button class="btn btn-sm btn-outline-success" (click)="viewBlog(blog._id)">view</button>
+      </span>
+
+    </div>
+
+  </div>
+</div>
+</div>

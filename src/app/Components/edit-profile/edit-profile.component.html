@@ -1,0 +1,32 @@
+<div class="card p-4">
+  <h2>Edit Profile</h2>
+  <form [formGroup]="editProfileForm">
+   <div class="fullName mb-3">
+    <div class="form-group">
+      <label for="firstName" class="mb-1">FirstName</label>
+      <input class="form-control form-control-sm" type="text" placeholder="First Name" formControlName="firstName">
+    </div>
+    <div class="form-group">
+      <label for="lastName" class="mb-1">LastName</label>
+      <input class="form-control form-control-sm" type="text" placeholder="First Name" formControlName="lastName">
+    </div>
+   </div>
+
+
+  <div class="form-group mb-3">
+    <label for="username" class="mb-1">UserName</label>
+    <input class="form-control form-control-sm" type="text" placeholder="First Name" formControlName="username">
+  </div>
+
+
+  <div class="form-group mb-3">
+    <label for="bio" class="mb-1">Bio</label>
+    <textarea class="form-control form-control-sm" type="text" placeholder="First Name" formControlName="bio"></textarea>
+  </div>
+  </form>
+
+  <mat-dialog-actions>
+    <button class="btn btn-sm btn-outline-secondary" mat-dialog-close>Cancel</button>
+    <button class="btn btn-sm btn-outline-success" (click)="save()">Save</button>
+  </mat-dialog-actions>
+</div>

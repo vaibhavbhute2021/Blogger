@@ -1,0 +1,92 @@
+<div class="container">
+    <section class="">
+      <div class="px-4 py-5 px-md-5 text-center text-lg-start">
+        <div class="container">
+          <div class="row gx-lg-5 align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <h1 class="my-5 display-3 fw-bold ls-tight">
+                The best offer <br />
+                <span class="text-primary">for your business</span>
+              </h1>
+              <p style="color: hsl(217, 10%, 50.8%)">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+                quibusdam tempora at cupiditate quis eum maiores libero
+                veritatis? Dicta facilis sint aliquid ipsum atque?
+              </p>
+            </div>
+  
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              <div class="card">
+                <div class="card-body py-5 px-md-5">
+                  <form [formGroup]="registerForm">
+                    <h2>Sign Up</h2>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control form-control-sm" formControlName="firstName" placeholder="First Name" />
+                        <div Class="text-danger mt-2" *ngIf="registerForm.get('firstName')?.touched && registerForm.get('firstName')?.hasError('required')">*FirstName is required</div>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control form-control-sm"  formControlName="lastName" placeholder="Last Name" />
+                        <div Class="text-danger mt-2" *ngIf="registerForm.get('lastName')?.touched && registerForm.get('lastName')?.hasError('required')">*LastName is required</div>
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <input type="text" class="form-control form-control-sm" formControlName="userName" placeholder="Username" />
+                      <div Class="text-danger mt-2" *ngIf="registerForm.get('userName')?.touched && registerForm.get('userName')?.hasError('required')">*UserName is required</div>
+                    </div>
+
+
+                    <div class="mb-3">
+                      <input type="phone" class="form-control form-control-sm" formControlName="phone" placeholder="Phone" />
+                      <div Class="text-danger mt-2" *ngIf="registerForm.get('phone')?.touched && registerForm.get('phone')?.hasError('required')">*Phone is required</div>
+                      <div Class="text-danger mt-2" *ngIf="registerForm.get('phone')?.touched && registerForm.get('phone')?.hasError('pattern')">*Enter Correct Phone no.</div>
+                    </div>
+
+
+                    <div class="mb-3">
+                      <input type="email" class="form-control form-control-sm" formControlName="email" placeholder="Email Address" />
+                      <div Class="text-danger mt-2" *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.hasError('email')">*Enter Valid Email</div>
+                      <div Class="text-danger mt-2" *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.hasError('required')">*Email is required</div>
+                    </div>
+
+
+                    <div class="mb-3">
+                      <input type="password" class="form-control form-control-sm" formControlName="password" placeholder="Password" />
+                      <div Class="text-danger mt-2" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.hasError('required')">*Password is required</div>
+                      <div Class="text-danger mt-2" *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.hasError('invalidPassword')">*Password must be at least 8 characters long, contain one uppercase letter, one lowercase letter, one digit, and one special character.
+                      </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <input type="password" class="form-control form-control-sm" formControlName="confirmpassword" placeholder="Confirm Password" />
+                      <div Class="text-danger mt-2" *ngIf="registerForm.get('confirmpassword')?.touched && registerForm.get('confirmpassword')?.hasError('required')">*Password is required</div>
+                      <div Class="text-danger mt-2" *ngIf="registerForm.get('confirmpassword')?.touched && registerForm.get('confirmpassword')?.hasError('confirmPasswordValidator')">*Password did Not matched.</div>
+                      <div Class="text-success mt-2" *ngIf="registerForm.get('confirmpassword')?.touched && !registerForm.get('confirmpassword')?.hasError('confirmPasswordValidator')">*Passwords match.</div>
+                    </div>
+                    
+
+                    <div class="form-check d-flex justify-content-center mb-4">
+                      <input class="form-check-input me-2" type="checkbox" checked />
+                      <label class="form-check-label">Subscribe to our newsletter</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mb-4" (click)="registerUser()">Sign up</button>
+                    <div>
+                      <a routerLink="/login" style="text-decoration: none;">
+                        Existing User? Login
+                      </a>
+                    </div>
+                  </form>
+                  
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <mat-spinner *ngIf="isLoading" class="spinner-overlay"></mat-spinner> -->
+  </div>
+  

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+.foot{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    text-align: center;
+    font-size:50px;
+    font-family: "Archivo Black", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: chocolate;
+    
+}
+
+p{
+font-family: "Lexend", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+     
+    
+}
+
+
+/* **************************************************************** */
+
+/* General Styles */
+.blog-container {
+  
+  border-radius: 10px;
+  margin-bottom: 20px;
+  
+ 
+}
+
+.blog-header {
+  text-align: center;
+}
+
+.blog-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.blog-category {
+  font-size: 1.2rem;
+  color: #777;
+}
+
+.blog-content {
+  padding: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.blog-tags {
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.blog-tags .tag {
+  margin-right: 5px;
+  color: #007bff;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+}
+
+.interaction {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+.interaction mat-icon {
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+.edit-btn button {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 10px;
+  }
+
+  .blog-heading {
+    font-size: 1.5rem;
+  }
+
+  .blog-category {
+    font-size: 1rem;
+  }
+
+  .blog-content {
+    font-size: 0.9rem;
+  }
+
+  .interaction span {
+    font-size: 0.9rem;
+  }
+
+  .edit-btn button {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-heading {
+    font-size: 1.2rem;
+  }
+
+  .blog-category {
+    font-size: 0.9rem;
+  }
+
+  .blog-content {
+    font-size: 0.8rem;
+  }
+
+  .interaction span {
+    font-size: 0.8rem;
+  }
+
+  .edit-btn button {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+:host {
+  display: block;
+}
+::ng-deep img {
+  display: block !important;
+  margin: 1rem auto !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 8px;
+}
+
+::ng-deep pre {
+  background: #f8f8f8;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+
+    
+ 
